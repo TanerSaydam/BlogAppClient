@@ -1,0 +1,16 @@
+
+<div class="container">
+    <button routerLink="/add-blog" class="btn btn-primary w-100">Add Blog</button>
+    <div class="row">
+      <div *ngFor="let blog of blogs" class="col-md-3">
+        <div class="card mb-4">
+          <h5 class="card-header">{{ blog.title }}</h5>
+          <div class="card-body">
+            <p class="card-text">{{ blog.content.slice(0, 50) }}</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

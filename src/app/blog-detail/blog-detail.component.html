@@ -1,0 +1,15 @@
+<div *ngIf="selectedBlog">
+    <h1>{{ selectedBlog.title }}</h1>
+    <p>{{ selectedBlog.description }}</p>
+    <hr>
+    <h3>Yorumlar:</h3>
+    <div *ngFor="let comment of comments">
+      <p>{{ comment.text }}</p>
+      <p>{{ comment.author }}</p>
+    </div>
+    <hr>
+    <form (ngSubmit)="addComment()">
+      <textarea [(ngModel)]="newCommentText" name="newCommentText"></textarea>
+      <button type="submit">Yorum Ekle</button>
+    </form>
+  </div>
